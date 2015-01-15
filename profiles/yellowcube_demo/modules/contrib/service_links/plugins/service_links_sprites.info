@@ -1,0 +1,15 @@
+name = Service Links Sprites
+description = Add the ability to handle sprites with Service Links
+core = 7.x
+package = Service Links
+dependencies[] = service_links
+
+configure = admin/config/services/service-links
+
+
+; Information added by drush on 2014-11-19
+version = "7.x-2.3-beta1+4-dev"
+core = "7.x"
+project = "service_links"
+datestamp = "1416400525"
+

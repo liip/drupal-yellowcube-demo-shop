@@ -1,0 +1,18 @@
+<?php
+/**
+ * @file
+ * Migrate API code for YellowCube demo content.
+ */
+
+/**
+ * Implements hook_migrate_api().
+ */
+function yellowcube_demo_content_migrate_api() {
+  return array(
+    'api' => 2,
+    'migrations' => array(
+      'YellowCubeDemoProducts' => array('class_name' => 'YellowCubeDemoProducts'),
+      'YellowCubeDemoProductNodes' => array('class_name' => 'YellowCubeDemoProductNodes'),
+    ),
+  );
+}

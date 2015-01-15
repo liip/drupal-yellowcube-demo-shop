@@ -1,0 +1,194 @@
+diff --git a/includes/migrate/dimensions.inc b/includes/migrate/dimensions.inc
+new file mode 100644
+index 0000000..028aef1
+--- /dev/null
++++ b/includes/migrate/dimensions.inc
+@@ -0,0 +1,79 @@
++<?php
++
++/**
++ * Class MigratePhysicalDimensionsFieldHandler
++ *
++ * Primary value is not used and subfields are used for dimensions.
++ * Example:
++ *   $this->addFieldMapping('field_dimensions')
++ *     ->defaultValue(1);
++ *   $this->addFieldMapping('field_dimensions:length', 'source_length');
++ *   $this->addFieldMapping('field_dimensions:width', 'source_width');
++ *   $this->addFieldMapping('field_dimensions:height', 'source_height');
++ *   $this->addFieldMapping('field_dimensions:unit')
++ *     ->defaultValue('mm');
++ */
++class MigratePhysicalDimensionsFieldHandler extends MigrateFieldHandler {
++  public function __construct() {
++    $this->registerTypes(array('physical_dimensions'));
++  }
++
++  static function arguments($unit = NULL) {
++    $arguments = array();
++    if (!is_null($unit)) {
++      $arguments['unit'] = $unit;
++    }
++    return $arguments;
++  }
++
++  /**
++   * Implementation of MigrateFieldHandler::fields().
++   *
++   * @param $type
++   *  The field type.
++   * @param $instance
++   *  Instance info for the field.
++   * @param Migration $migration
++   *  The migration context for the parent field. We can look at the mappings
++   *  and determine which subfields are relevant.
++   * @return array
++   */
++  public function fields($type, $instance, $migration = NULL) {
++    return array(
++      'length' => t('Subfield: !field', array('@field' => t('Length'))),
++      'width' => t('Subfield: !field', array('@field' => t('Width'))),
++      'height' => t('Subfield: !field', array('@field' => t('Height'))),
++      'unit' => t('Subfield: The unit of measure for the dimensions'),
++    );
++  }
++
++  public function prepare($entity, array $field_info, array $instance, array $values) {
++    if (isset($values['arguments'])) {
++      $arguments = $values['arguments'];
++      unset($values['arguments']);
++    }
++    else {
++      $arguments = array();
++    }
++
++    $language = $this->getFieldLanguage($entity, $field_info, $arguments);
++
++    foreach ($values as $delta => $value) {
++      $item = array();
++      foreach (array_keys(self::fields('', '')) as $subfield) {
++        if (isset($arguments[$subfield])) {
++          if (!is_array($arguments[$subfield])) {
++            $item[$subfield] = $arguments[$subfield];
++          }
++          else if (isset($arguments[$subfield][$delta])) {
++            $item[$subfield] = $arguments[$subfield][$delta];
++          }
++        }
++      }
++      $return[$language][$delta] = $item;
++    }
++
++    return isset($return) ? $return : NULL;
++  }
++}
++
+diff --git a/includes/migrate/weight.inc b/includes/migrate/weight.inc
+new file mode 100644
+index 0000000..bbb05dc
+--- /dev/null
++++ b/includes/migrate/weight.inc
+@@ -0,0 +1,70 @@
++<?php
++
++/**
++ * Class MigratePhysicalWeightFieldHandler
++ *
++ * Example:
++ *   $this->addFieldMapping('field_weight', 'source_weight);
++ *   $this->addFieldMapping('field_weight:unit')
++ *     ->defaultValue('g');
++ */
++class MigratePhysicalWeightFieldHandler extends MigrateFieldHandler {
++  public function __construct() {
++    $this->registerTypes(array('physical_weight'));
++  }
++
++  static function arguments($unit = NULL) {
++    $arguments = array();
++    if (!is_null($unit)) {
++      $arguments['unit'] = $unit;
++    }
++    return $arguments;
++  }
++
++  /**
++   * Implementation of MigrateFieldHandler::fields().
++   *
++   * @param $type
++   *   The field type.
++   * @param $instance
++   *   Instance info for the field.
++   * @param Migration $migration
++   *   The migration context for the parent field. We can look at the mappings
++   *   and determine which subfields are relevant.
++   * @return array
++   */
++  public function fields($type, $instance, $migration = NULL) {
++    return array(
++      'unit' => t('Subfield: The unit of measure for the weight'),
++    );
++  }
++
++  public function prepare($entity, array $field_info, array $instance, array $values) {
++    if (isset($values['arguments'])) {
++      $arguments = $values['arguments'];
++      unset($values['arguments']);
++    }
++    else {
++      $arguments = array();
++    }
++
++    $language = $this->getFieldLanguage($entity, $field_info, $arguments);
++
++    foreach ($values as $delta => $value) {
++      $item = array();
++      if (isset($arguments['unit'])) {
++        if (!is_array($arguments['unit'])) {
++          $item['unit'] = $arguments['unit'];
++        }
++        else if (isset($arguments['unit'][$delta])) {
++          $item['unit'] = $arguments['unit'][$delta];
++        }
++      }
++      $item['weight'] = $value;
++      $return[$language][$delta] = $item;
++    }
++
++    return isset($return) ? $return : NULL;
++  }
++}
++
+diff --git a/physical.info b/physical.info
+index bae80e2..d618d67 100644
+--- a/physical.info
++++ b/physical.info
+@@ -2,3 +2,5 @@ name = Physical Fields
+ description = Defines fields (e.g. weight and dimensions) to support describing the physical attributes of entities.
+ package = Fields
+ core = 7.x
++files[] = includes/migrate/dimensions.inc
++files[] = includes/migrate/weight.inc
+diff --git a/physical.migrate.inc b/physical.migrate.inc
+new file mode 100644
+index 0000000..2aff4af
+--- /dev/null
++++ b/physical.migrate.inc
+@@ -0,0 +1,17 @@
++<?php
++
++
++/**
++ * Implementation of hook_migrate_api().
++ */
++function physical_migrate_api() {
++  $api = array(
++    'api' => 2,
++    'field handlers' => array(
++      'MigratePhysicalDimensionsFieldHandler',
++      'MigratePhysicalWeightFieldHandler',
++    ),
++  );
++  return $api;
++}
++

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the YellowCube Demo feature.
+ */
+
+include_once 'yellowcube_demo_config.features.inc';

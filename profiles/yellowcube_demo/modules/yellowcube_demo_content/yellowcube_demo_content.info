@@ -1,0 +1,8 @@
+name = YellowCube Demo Content
+description = Provides demo content for the YellowCube Demo distribution.
+package = Commerce
+core = 7.x
+dependencies[] = migrate
+dependencies[] = commerce_migrate
+
+files[] = yellowcube_demo_content.migrate.inc
