@@ -37,8 +37,7 @@ class YellowCubeDemoProducts extends Migration {
 
     $this->addFieldMapping('commerce_stock')->defaultValue(0);
 
-    $this->addFieldMapping('title', 'title_de')
-      ->callbacks(array($this, 'prependValue'));;
+    $this->addFieldMapping('title', 'custom_title');
 
     $this->addFieldMapping('sku', 'sku');
 
@@ -53,10 +52,6 @@ class YellowCubeDemoProducts extends Migration {
     $this->addFieldMapping('field_dimensions:width', 'width');
     $this->addFieldMapping('field_dimensions:height', 'height');
     $this->addFieldMapping('field_dimensions:unit')->defaultValue('m');
-
-
-
-    //$this->addFieldMapping('');
 
     $this->addFieldMapping('language', 'language');
     $this->addFieldMapping('uid', 'uid');
@@ -119,12 +114,9 @@ class YellowCubeDemoProducts extends Migration {
 
     $row->language = LANGUAGE_NONE;
     $row->uid = 1;
-  }
 
-
-  public function prependValue($value) {
-    $value = 'Drupal: ' .$value;
-    return $value;
+    //distinguish product variations
+    $row->custom_title = $row->sku . ' - ' . $row->title_de;
   }
 
 }
@@ -188,6 +180,7 @@ class YellowCubeDemoProductNodes extends Migration {
       $products[] = $product->product_id;
     }
     $row->skus = $products;
+
   }
 
   /**

@@ -177,14 +177,128 @@ function yellowcube_demo_config_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__yellowcube_demo_product';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '30',
+          'weight' => '3',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'product:sku' => array(
+          'default' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+        ),
+        'product:title' => array(
+          'default' => array(
+            'weight' => '11',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '11',
+            'visible' => FALSE,
+          ),
+        ),
+        'product:status' => array(
+          'default' => array(
+            'weight' => '12',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '12',
+            'visible' => FALSE,
+          ),
+        ),
+        'product:title_field' => array(
+          'default' => array(
+            'weight' => '9',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '9',
+            'visible' => FALSE,
+          ),
+        ),
+        'product:commerce_price' => array(
+          'default' => array(
+            'weight' => '7',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '3',
+            'visible' => TRUE,
+          ),
+        ),
+        'product:yellowcube_demo_description' => array(
+          'default' => array(
+            'weight' => '3',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '4',
+            'visible' => TRUE,
+          ),
+        ),
+        'product:yellowcube_demo_ean' => array(
+          'default' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
+        ),
+        'product:commerce_stock' => array(
+          'default' => array(
+            'weight' => '4',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+        ),
+        'product:field_weight' => array(
+          'default' => array(
+            'weight' => '5',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '6',
+            'visible' => FALSE,
+          ),
+        ),
+        'product:field_dimensions' => array(
+          'default' => array(
+            'weight' => '6',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '7',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__yellowcube_demo_product'] = $strongarm;

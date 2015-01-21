@@ -45,7 +45,7 @@ function yellowcube_demo_config_field_default_field_instances() {
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'module' => 'commerce_price',
         'settings' => array(
           'calculation' => 'calculated_sell_price',
@@ -143,7 +143,7 @@ function yellowcube_demo_config_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => NULL,
+    'description' => '',
     'display' => array(
       'add_to_cart_confirmation_view' => array(
         'label' => 'above',
@@ -152,13 +152,13 @@ function yellowcube_demo_config_field_default_field_instances() {
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
+          'prefix_suffix' => 1,
           'scale' => 2,
-          'thousand_separator' => ' ',
+          'thousand_separator' => '',
         ),
         'type' => 'number_decimal',
         'weight' => 4,
@@ -177,9 +177,10 @@ function yellowcube_demo_config_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'commerce_product',
+    'fences_wrapper' => '',
     'field_name' => 'commerce_stock',
     'label' => 'Stock',
-    'required' => TRUE,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -188,6 +189,7 @@ function yellowcube_demo_config_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 0,
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
@@ -209,7 +211,7 @@ function yellowcube_demo_config_field_default_field_instances() {
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'physical',
         'settings' => array(),
         'type' => 'physical_dimensions_formatted',
@@ -262,7 +264,7 @@ function yellowcube_demo_config_field_default_field_instances() {
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'physical',
         'settings' => array(),
         'type' => 'physical_weight_formatted',
@@ -315,7 +317,7 @@ function yellowcube_demo_config_field_default_field_instances() {
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -370,7 +372,7 @@ function yellowcube_demo_config_field_default_field_instances() {
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -423,7 +425,7 @@ function yellowcube_demo_config_field_default_field_instances() {
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -462,6 +464,61 @@ function yellowcube_demo_config_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-yellowcube_demo_product-field_image'
+  $field_instances['node-yellowcube_demo_product-field_image'] = array(
+    'bundle' => 'yellowcube_demo_product',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'medium',
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'thumbnail',
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => '',
+    'field_name' => 'field_image',
+    'label' => 'Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => 'product/images',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'medium',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'node-yellowcube_demo_product-field_product'
   $field_instances['node-yellowcube_demo_product-field_product'] = array(
     'bundle' => 'yellowcube_demo_product',
@@ -472,15 +529,14 @@ function yellowcube_demo_config_field_default_field_instances() {
         'label' => 'above',
         'module' => 'commerce_cart',
         'settings' => array(
-          'attributes_single' => 1,
           'combine' => 1,
           'default_quantity' => 1,
           'line_item_type' => 'product',
           'show_quantity' => 1,
-          'show_single_product_attributes' => FALSE,
+          'show_single_product_attributes' => 0,
         ),
         'type' => 'commerce_cart_add_to_cart_form',
-        'weight' => 3,
+        'weight' => 8,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -496,19 +552,21 @@ function yellowcube_demo_config_field_default_field_instances() {
         'weight' => 5,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => '',
     'field_name' => 'field_product',
     'label' => 'Product variations',
-    'required' => TRUE,
+    'required' => 1,
     'settings' => array(
       'field_injection' => 1,
       'referenceable_types' => array(
+        'product' => 0,
         'yellowcube_demo_product' => 'yellowcube_demo_product',
       ),
       'user_register_form' => FALSE,
@@ -520,14 +578,16 @@ function yellowcube_demo_config_field_default_field_instances() {
         'fields' => array(),
         'type_settings' => array(
           'allow_existing' => 0,
-          'autogenerate_title' => 1,
+          'autogenerate_title' => 0,
           'delete_references' => 1,
+          'label_plural' => 'variations',
+          'label_singular' => 'variation',
           'match_operator' => 'CONTAINS',
-          'use_variation_language' => 1,
+          'override_labels' => 1,
         ),
       ),
       'type' => 'inline_entity_form',
-      'weight' => 31,
+      'weight' => 1,
     ),
   );
 
@@ -540,25 +600,16 @@ function yellowcube_demo_config_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'title_class' => '',
-          'title_link' => 'content',
-          'title_style' => '',
-        ),
-        'type' => 'title_linked',
-        'weight' => -20,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'title_class' => '',
-          'title_link' => 'content',
-          'title_style' => '',
-        ),
-        'type' => 'title_linked',
-        'weight' => -20,
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
@@ -579,7 +630,7 @@ function yellowcube_demo_config_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -5,
+      'weight' => 0,
     ),
   );
 
@@ -588,6 +639,7 @@ function yellowcube_demo_config_field_default_field_instances() {
   t('Description');
   t('Dimensions');
   t('EAN');
+  t('Image');
   t('Price');
   t('Product variations');
   t('Stock');
