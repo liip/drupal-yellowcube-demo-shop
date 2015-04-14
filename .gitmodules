@@ -1,3 +1,0 @@
-[submodule "profiles/yellowcube_demo/modules/yellowcube"]
-	path = profiles/yellowcube_demo/modules/yellowcube
-	url = git@github.com:swisspost-yellowcube/drupal-yellowcube.git

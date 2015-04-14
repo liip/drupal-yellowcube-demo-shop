@@ -3,5 +3,5 @@ sites/*/settings*.php
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
-profiles/yellowcube_demo/.git
-.idea
+# Ignore the drupal yellowcube module and its dependencies
+profiles/yellowcube_demo/modules/yellowcube
