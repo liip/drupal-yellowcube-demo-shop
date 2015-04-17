@@ -10,4 +10,4 @@ http://master-rfb67c2xwnqk6.eu.platform.sh/:
   ssi:
     enabled: false
   type: upstream
-  upstream: ''
+  upstream: php:php
