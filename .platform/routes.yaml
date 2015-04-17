@@ -10,7 +10,7 @@ http://master-rfb67c2xwnqk6.eu.platform.sh/:
   ssi:
     enabled: false
   type: upstream
-  upstream: php:php
+  upstream: ''
 http://www.{default}/:
   to: http://{default}/
   type: redirect
