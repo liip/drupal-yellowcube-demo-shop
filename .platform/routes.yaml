@@ -11,10 +11,3 @@ http://master-rfb67c2xwnqk6.eu.platform.sh/:
     enabled: false
   type: upstream
   upstream: ''
-http://{default}/:
-  cache:
-    enabled: true
-  ssi:
-    enabled: false
-  type: upstream
-  upstream: php:php
