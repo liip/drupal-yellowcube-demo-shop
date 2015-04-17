@@ -2,7 +2,7 @@
 # in the same project.
 
 # The name of this app. Must be unique within a project.
-name: drupal-yellowcube-demo-shop
+name: demoshop
 
 # The toolstack used to build the application.
 toolstack: "php:drupal"
