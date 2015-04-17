@@ -11,9 +11,6 @@ http://master-rfb67c2xwnqk6.eu.platform.sh/:
     enabled: false
   type: upstream
   upstream: ''
-http://www.{default}/:
-  to: http://{default}/
-  type: redirect
 http://{default}/:
   cache:
     enabled: true
