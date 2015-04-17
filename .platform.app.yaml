@@ -66,4 +66,3 @@ runtime:
         - mcrypt
         - zendopcache
         - apc
-        - openssl
