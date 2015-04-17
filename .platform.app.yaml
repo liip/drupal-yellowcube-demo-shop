@@ -38,9 +38,13 @@ hooks:
 
     # We run deploy hook after your application has been deployed and started.
     deploy: |
-      bash scripts/install.sh
       cd public
       drush -y updatedb
+      drush pm-enable yellowcube yellowcube_demo yellowcube_demo_content admin_menu_toolbar -y
+      drush pm-disable toolbar -y
+      drush vset theme_default yellowcube
+
+      drush mi YellowCubeDemoProductNodes
 
 # The configuration of scheduled execution.
 crons:
