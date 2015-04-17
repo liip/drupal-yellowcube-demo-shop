@@ -18,10 +18,10 @@ check if your branch (= environment) is active. You'll find all URLs to the envi
 
 A local installation requires a working local HTTP and database server.
 
-   git clone git@github.com:liip/drupal-yellowcube-demo-shop.git
-   cd drupal-yellowcube-demo-shop
+    git clone git@github.com:liip/drupal-yellowcube-demo-shop.git
+    cd drupal-yellowcube-demo-shop
 
-   bash scripts/install.sh
-   bash scripts/update.sh
+    bash scripts/install.sh
+    bash scripts/update.sh
 
 
