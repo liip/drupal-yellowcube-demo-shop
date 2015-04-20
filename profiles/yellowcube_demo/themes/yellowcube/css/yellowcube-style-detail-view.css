@@ -45,8 +45,14 @@
 .page-node.node-type-yellowcube-demo-product div.messages.commerce-add-to-cart-confirmation {
   background-color: #fff5d2;
 }
+.page-node.node-type-yellowcube-demo-product div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-message-product-display .view-content .views-field-commerce-total .field-content {
+  color: #878380;
+}
 .page-node.node-type-yellowcube-demo-product div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper {
   background-color: #fee9a0;
+}
+.page-node.node-type-yellowcube-demo-product div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper .button.checkout {
+  background-color: #878380;
 }
 .page-node.node-type-yellowcube-demo-product div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-message-product-display .view-content {
   margin-left: 0;
