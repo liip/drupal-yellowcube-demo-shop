@@ -1,0 +1,53 @@
+.page-node.node-type-yellowcube-demo-product .detail-view .col-sm-6 {
+  display: inline-block;
+  padding: 10px;
+}
+.page-node.node-type-yellowcube-demo-product .detail-view .col-sm-6 .field-name-title h2 {
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.page-node.node-type-yellowcube-demo-product .detail-view .col-sm-6 .field-name-commerce-price .field-item {
+  color: #fdd23b;
+  font-size: 125%;
+}
+.page-node.node-type-yellowcube-demo-product .detail-view .col-sm-6 .form-type-textfield {
+  display: inline-block;
+}
+.page-node.node-type-yellowcube-demo-product .detail-view .col-sm-6 .form-type-textfield label {
+  display: inline-block;
+  color: #888;
+}
+.page-node.node-type-yellowcube-demo-product .detail-view .col-sm-6 .form-type-textfield input {
+  height: 34px;
+}
+.page-node.node-type-yellowcube-demo-product .detail-view .col-sm-6 .form-submit {
+  float: right;
+  margin-top: 14px;
+  padding: 10px;
+  border-radius: 0;
+  background: none;
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+.page-node.node-type-yellowcube-demo-product .detail-view .col-sm-6 .form-submit:hover {
+  background-color: #fdd23b;
+  color: #000;
+  border: 1px solid #d7d7d7;
+}
+.page-node.node-type-yellowcube-demo-product .detail-view .col-sm-12 {
+  padding: 10px;
+}
+.page-node.node-type-yellowcube-demo-product .detail-view .field-label {
+  color: #888;
+}
+.page-node.node-type-yellowcube-demo-product div.messages.commerce-add-to-cart-confirmation {
+  background-color: #fff5d2;
+}
+.page-node.node-type-yellowcube-demo-product div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper {
+  background-color: #fee9a0;
+}
+.page-node.node-type-yellowcube-demo-product div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-message-product-display .view-content {
+  margin-left: 0;
+}

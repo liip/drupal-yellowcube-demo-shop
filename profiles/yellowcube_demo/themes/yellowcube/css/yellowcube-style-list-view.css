@@ -1,11 +1,8 @@
-#block-system-main .node-yellowcube-demo-product {
+.node.node-yellowcube-demo-product {
   width: 27.5%;
   display: inline-block;
   margin-right: 30px;
 }
-#block-system-main .node-yellowcube-demo-product:nth-child(3n+3) {
+.node.node-yellowcube-demo-product:nth-child(3n+3) {
   margin-right: 0;
-}
-#block-system-main .node-yellowcube-demo-product .field-name-field-image {
-  border: 1px solid indianred;
 }
