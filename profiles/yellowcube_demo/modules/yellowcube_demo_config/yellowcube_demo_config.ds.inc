@@ -22,6 +22,11 @@ function yellowcube_demo_config_ds_field_settings_info() {
       'label' => 'hidden',
       'format' => 'default',
     ),
+    'comments' => array(
+      'weight' => '9',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
   );
   $export['node|yellowcube_demo_product|default'] = $ds_fieldsetting;
 
@@ -80,7 +85,7 @@ function yellowcube_demo_config_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'yellowcube_demo_product';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'bootstrap_6_6';
+  $ds_layout->layout = 'bootstrap_6_6_stacked';
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
@@ -89,32 +94,38 @@ function yellowcube_demo_config_ds_layout_settings_info() {
       'right' => array(
         1 => 'title',
         2 => 'product:commerce_price',
-        3 => 'product:commerce_stock',
-        4 => 'product:yellowcube_demo_ean',
-        5 => 'product:yellowcube_demo_description',
-        6 => 'product:field_weight',
-        7 => 'product:field_dimensions',
-        8 => 'field_product',
+        3 => 'field_product',
+      ),
+      'bottom' => array(
+        4 => 'product:yellowcube_demo_description',
+        5 => 'product:field_weight',
+        6 => 'product:field_dimensions',
+        7 => 'product:commerce_stock',
+        8 => 'product:yellowcube_demo_ean',
+        9 => 'comments',
       ),
     ),
     'fields' => array(
       'field_image' => 'left',
       'title' => 'right',
       'product:commerce_price' => 'right',
-      'product:commerce_stock' => 'right',
-      'product:yellowcube_demo_ean' => 'right',
-      'product:yellowcube_demo_description' => 'right',
-      'product:field_weight' => 'right',
-      'product:field_dimensions' => 'right',
       'field_product' => 'right',
+      'product:yellowcube_demo_description' => 'bottom',
+      'product:field_weight' => 'bottom',
+      'product:field_dimensions' => 'bottom',
+      'product:commerce_stock' => 'bottom',
+      'product:yellowcube_demo_ean' => 'bottom',
+      'comments' => 'bottom',
     ),
     'classes' => array(),
     'wrappers' => array(
+      'top' => 'div',
       'left' => 'div',
       'right' => 'div',
+      'bottom' => 'div',
     ),
     'layout_wrapper' => 'div',
-    'layout_attributes' => '',
+    'layout_attributes' => 'class="detail-view"',
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',

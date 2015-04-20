@@ -536,7 +536,7 @@ function yellowcube_demo_config_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'module' => 'commerce_cart',
         'settings' => array(
           'combine' => 1,
@@ -546,7 +546,7 @@ function yellowcube_demo_config_field_default_field_instances() {
           'show_single_product_attributes' => 0,
         ),
         'type' => 'commerce_cart_add_to_cart_form',
-        'weight' => 8,
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'inline',

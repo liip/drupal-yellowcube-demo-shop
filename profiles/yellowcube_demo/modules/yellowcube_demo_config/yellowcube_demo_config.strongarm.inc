@@ -273,7 +273,7 @@ function yellowcube_demo_config_strongarm() {
         ),
         'product:yellowcube_demo_description' => array(
           'default' => array(
-            'weight' => '5',
+            'weight' => '4',
             'visible' => TRUE,
           ),
           'teaser' => array(
@@ -287,7 +287,7 @@ function yellowcube_demo_config_strongarm() {
         ),
         'product:yellowcube_demo_ean' => array(
           'default' => array(
-            'weight' => '4',
+            'weight' => '8',
             'visible' => TRUE,
           ),
           'teaser' => array(
@@ -301,7 +301,7 @@ function yellowcube_demo_config_strongarm() {
         ),
         'product:commerce_stock' => array(
           'default' => array(
-            'weight' => '3',
+            'weight' => '7',
             'visible' => TRUE,
           ),
           'teaser' => array(
@@ -315,7 +315,7 @@ function yellowcube_demo_config_strongarm() {
         ),
         'product:field_weight' => array(
           'default' => array(
-            'weight' => '6',
+            'weight' => '5',
             'visible' => TRUE,
           ),
           'teaser' => array(
@@ -329,7 +329,7 @@ function yellowcube_demo_config_strongarm() {
         ),
         'product:field_dimensions' => array(
           'default' => array(
-            'weight' => '7',
+            'weight' => '6',
             'visible' => TRUE,
           ),
           'teaser' => array(
