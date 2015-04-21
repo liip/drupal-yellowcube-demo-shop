@@ -19,7 +19,6 @@ function yellowcube_demo_config_field_default_field_bases() {
       0 => 'commerce_product',
     ),
     'field_name' => 'commerce_price',
-    'foreign keys' => array(),
     'indexes' => array(
       'currency_price' => array(
         0 => 'amount',
@@ -42,7 +41,6 @@ function yellowcube_demo_config_field_default_field_bases() {
       0 => 'commerce_product',
     ),
     'field_name' => 'commerce_stock',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'number',
@@ -62,7 +60,6 @@ function yellowcube_demo_config_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_dimensions',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'physical',
@@ -78,14 +75,6 @@ function yellowcube_demo_config_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_image',
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
-    ),
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -110,14 +99,6 @@ function yellowcube_demo_config_field_default_field_bases() {
       0 => 'node',
     ),
     'field_name' => 'field_product',
-    'foreign keys' => array(
-      'product_id' => array(
-        'columns' => array(
-          'product_id' => 'product_id',
-        ),
-        'table' => 'commerce_product',
-      ),
-    ),
     'indexes' => array(
       'product_id' => array(
         0 => 'product_id',
@@ -139,7 +120,6 @@ function yellowcube_demo_config_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_weight',
-    'foreign keys' => array(),
     'indexes' => array(
       'weight' => array(
         0 => 'weight',
@@ -159,14 +139,6 @@ function yellowcube_demo_config_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'title_field',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -188,14 +160,6 @@ function yellowcube_demo_config_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'yellowcube_demo_description',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -217,14 +181,6 @@ function yellowcube_demo_config_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'yellowcube_demo_ean',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',

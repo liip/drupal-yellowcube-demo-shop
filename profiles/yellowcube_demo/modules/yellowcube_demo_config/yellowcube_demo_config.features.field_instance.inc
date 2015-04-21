@@ -10,7 +10,8 @@
 function yellowcube_demo_config_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'commerce_product-yellowcube_demo_product-commerce_price'
+  // Exported field_instance:
+  // 'commerce_product-yellowcube_demo_product-commerce_price'
   $field_instances['commerce_product-yellowcube_demo_product-commerce_price'] = array(
     'bundle' => 'yellowcube_demo_product',
     'default_value' => NULL,
@@ -134,7 +135,8 @@ function yellowcube_demo_config_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_product-yellowcube_demo_product-commerce_stock'
+  // Exported field_instance:
+  // 'commerce_product-yellowcube_demo_product-commerce_stock'
   $field_instances['commerce_product-yellowcube_demo_product-commerce_stock'] = array(
     'bundle' => 'yellowcube_demo_product',
     'default_value' => array(
@@ -197,7 +199,8 @@ function yellowcube_demo_config_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_product-yellowcube_demo_product-field_dimensions'
+  // Exported field_instance:
+  // 'commerce_product-yellowcube_demo_product-field_dimensions'
   $field_instances['commerce_product-yellowcube_demo_product-field_dimensions'] = array(
     'bundle' => 'yellowcube_demo_product',
     'default_value' => NULL,
@@ -250,7 +253,8 @@ function yellowcube_demo_config_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_product-yellowcube_demo_product-field_weight'
+  // Exported field_instance:
+  // 'commerce_product-yellowcube_demo_product-field_weight'
   $field_instances['commerce_product-yellowcube_demo_product-field_weight'] = array(
     'bundle' => 'yellowcube_demo_product',
     'default_value' => NULL,
@@ -303,7 +307,8 @@ function yellowcube_demo_config_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_product-yellowcube_demo_product-title_field'
+  // Exported field_instance:
+  // 'commerce_product-yellowcube_demo_product-title_field'
   $field_instances['commerce_product-yellowcube_demo_product-title_field'] = array(
     'bundle' => 'yellowcube_demo_product',
     'default_value' => NULL,
@@ -358,7 +363,8 @@ function yellowcube_demo_config_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_product-yellowcube_demo_product-yellowcube_demo_description'
+  // Exported field_instance:
+  // 'commerce_product-yellowcube_demo_product-yellowcube_demo_description'
   $field_instances['commerce_product-yellowcube_demo_product-yellowcube_demo_description'] = array(
     'bundle' => 'yellowcube_demo_product',
     'default_value' => NULL,
@@ -372,7 +378,7 @@ function yellowcube_demo_config_field_default_field_instances() {
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -411,7 +417,8 @@ function yellowcube_demo_config_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_product-yellowcube_demo_product-yellowcube_demo_ean'
+  // Exported field_instance:
+  // 'commerce_product-yellowcube_demo_product-yellowcube_demo_ean'
   $field_instances['commerce_product-yellowcube_demo_product-yellowcube_demo_ean'] = array(
     'bundle' => 'yellowcube_demo_product',
     'default_value' => NULL,
@@ -478,17 +485,27 @@ function yellowcube_demo_config_field_default_field_instances() {
           'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'product_detail',
+        ),
+        'type' => 'image',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'image_link' => '',
-          'image_style' => 'thumbnail',
+          'image_link' => 'content',
+          'image_style' => 'large',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
@@ -526,7 +543,7 @@ function yellowcube_demo_config_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'commerce_cart',
         'settings' => array(
           'combine' => 1,
@@ -536,10 +553,10 @@ function yellowcube_demo_config_field_default_field_instances() {
           'show_single_product_attributes' => 0,
         ),
         'type' => 'commerce_cart_add_to_cart_form',
-        'weight' => 8,
+        'weight' => 3,
       ),
       'full' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'module' => 'commerce_cart',
         'settings' => array(
           'combine' => 1,
@@ -549,13 +566,13 @@ function yellowcube_demo_config_field_default_field_instances() {
           'show_single_product_attributes' => FALSE,
         ),
         'type' => 'commerce_cart_add_to_cart_form',
-        'weight' => 5,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 11,
       ),
     ),
     'entity_type' => 'node',
@@ -602,14 +619,19 @@ function yellowcube_demo_config_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 16,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
+        'type' => 'hidden',
+        'weight' => 18,
       ),
     ),
     'entity_type' => 'node',

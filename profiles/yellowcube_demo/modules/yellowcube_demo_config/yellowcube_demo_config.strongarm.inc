@@ -182,12 +182,15 @@ function yellowcube_demo_config_strongarm() {
         'custom_settings' => TRUE,
       ),
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
       ),
       'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -200,45 +203,103 @@ function yellowcube_demo_config_strongarm() {
       'display' => array(
         'product:sku' => array(
           'default' => array(
-            'weight' => '10',
+            'weight' => '18',
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '10',
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '18',
             'visible' => FALSE,
           ),
         ),
         'product:title' => array(
           'default' => array(
-            'weight' => '11',
+            'weight' => '19',
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '11',
+            'weight' => '19',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '19',
             'visible' => FALSE,
           ),
         ),
         'product:status' => array(
           'default' => array(
-            'weight' => '12',
+            'weight' => '20',
             'visible' => FALSE,
           ),
           'teaser' => array(
             'weight' => '12',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '20',
             'visible' => FALSE,
           ),
         ),
         'product:title_field' => array(
           'default' => array(
-            'weight' => '9',
+            'weight' => '17',
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '9',
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '1',
             'visible' => FALSE,
           ),
         ),
         'product:commerce_price' => array(
+          'default' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
+        ),
+        'product:yellowcube_demo_description' => array(
+          'default' => array(
+            'weight' => '4',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '4',
+            'visible' => TRUE,
+          ),
+        ),
+        'product:yellowcube_demo_ean' => array(
+          'default' => array(
+            'weight' => '8',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '13',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '8',
+            'visible' => TRUE,
+          ),
+        ),
+        'product:commerce_stock' => array(
           'default' => array(
             'weight' => '7',
             'visible' => TRUE,
@@ -247,35 +308,9 @@ function yellowcube_demo_config_strongarm() {
             'weight' => '3',
             'visible' => TRUE,
           ),
-        ),
-        'product:yellowcube_demo_description' => array(
-          'default' => array(
-            'weight' => '3',
+          'full' => array(
+            'weight' => '7',
             'visible' => TRUE,
-          ),
-          'teaser' => array(
-            'weight' => '4',
-            'visible' => TRUE,
-          ),
-        ),
-        'product:yellowcube_demo_ean' => array(
-          'default' => array(
-            'weight' => '2',
-            'visible' => TRUE,
-          ),
-          'teaser' => array(
-            'weight' => '2',
-            'visible' => TRUE,
-          ),
-        ),
-        'product:commerce_stock' => array(
-          'default' => array(
-            'weight' => '4',
-            'visible' => TRUE,
-          ),
-          'teaser' => array(
-            'weight' => '5',
-            'visible' => FALSE,
           ),
         ),
         'product:field_weight' => array(
@@ -284,8 +319,12 @@ function yellowcube_demo_config_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '6',
+            'weight' => '16',
             'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '5',
+            'visible' => TRUE,
           ),
         ),
         'product:field_dimensions' => array(
@@ -294,7 +333,11 @@ function yellowcube_demo_config_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '7',
+            'weight' => '15',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '6',
             'visible' => TRUE,
           ),
         ),
