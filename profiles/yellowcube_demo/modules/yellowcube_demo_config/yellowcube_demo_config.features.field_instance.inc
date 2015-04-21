@@ -10,7 +10,8 @@
 function yellowcube_demo_config_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'commerce_product-yellowcube_demo_product-commerce_price'
+  // Exported field_instance:
+  // 'commerce_product-yellowcube_demo_product-commerce_price'
   $field_instances['commerce_product-yellowcube_demo_product-commerce_price'] = array(
     'bundle' => 'yellowcube_demo_product',
     'default_value' => NULL,
@@ -134,7 +135,8 @@ function yellowcube_demo_config_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_product-yellowcube_demo_product-commerce_stock'
+  // Exported field_instance:
+  // 'commerce_product-yellowcube_demo_product-commerce_stock'
   $field_instances['commerce_product-yellowcube_demo_product-commerce_stock'] = array(
     'bundle' => 'yellowcube_demo_product',
     'default_value' => array(
@@ -197,7 +199,8 @@ function yellowcube_demo_config_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_product-yellowcube_demo_product-field_dimensions'
+  // Exported field_instance:
+  // 'commerce_product-yellowcube_demo_product-field_dimensions'
   $field_instances['commerce_product-yellowcube_demo_product-field_dimensions'] = array(
     'bundle' => 'yellowcube_demo_product',
     'default_value' => NULL,
@@ -250,7 +253,8 @@ function yellowcube_demo_config_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_product-yellowcube_demo_product-field_weight'
+  // Exported field_instance:
+  // 'commerce_product-yellowcube_demo_product-field_weight'
   $field_instances['commerce_product-yellowcube_demo_product-field_weight'] = array(
     'bundle' => 'yellowcube_demo_product',
     'default_value' => NULL,
@@ -303,7 +307,8 @@ function yellowcube_demo_config_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_product-yellowcube_demo_product-title_field'
+  // Exported field_instance:
+  // 'commerce_product-yellowcube_demo_product-title_field'
   $field_instances['commerce_product-yellowcube_demo_product-title_field'] = array(
     'bundle' => 'yellowcube_demo_product',
     'default_value' => NULL,
@@ -358,7 +363,8 @@ function yellowcube_demo_config_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_product-yellowcube_demo_product-yellowcube_demo_description'
+  // Exported field_instance:
+  // 'commerce_product-yellowcube_demo_product-yellowcube_demo_description'
   $field_instances['commerce_product-yellowcube_demo_product-yellowcube_demo_description'] = array(
     'bundle' => 'yellowcube_demo_product',
     'default_value' => NULL,
@@ -372,7 +378,7 @@ function yellowcube_demo_config_field_default_field_instances() {
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -411,7 +417,8 @@ function yellowcube_demo_config_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_product-yellowcube_demo_product-yellowcube_demo_ean'
+  // Exported field_instance:
+  // 'commerce_product-yellowcube_demo_product-yellowcube_demo_ean'
   $field_instances['commerce_product-yellowcube_demo_product-yellowcube_demo_ean'] = array(
     'bundle' => 'yellowcube_demo_product',
     'default_value' => NULL,

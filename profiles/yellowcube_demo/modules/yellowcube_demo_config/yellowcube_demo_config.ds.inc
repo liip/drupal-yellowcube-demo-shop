@@ -44,7 +44,7 @@ function yellowcube_demo_config_ds_field_settings_info() {
     ),
     'comments' => array(
       'weight' => '9',
-      'label' => 'hidden',
+      'label' => 'inline',
       'format' => 'default',
     ),
   );
@@ -138,18 +138,13 @@ function yellowcube_demo_config_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'yellowcube_demo_product';
   $ds_layout->view_mode = 'full';
-  $ds_layout->layout = 'bootstrap_6_6_stacked';
+  $ds_layout->layout = 'bootstrap_6_6';
   $ds_layout->settings = array(
     'regions' => array(
       'right' => array(
         0 => 'title',
         2 => 'product:commerce_price',
         3 => 'field_product',
-      ),
-      'left' => array(
-        1 => 'field_image',
-      ),
-      'bottom' => array(
         4 => 'product:yellowcube_demo_description',
         5 => 'product:field_weight',
         6 => 'product:field_dimensions',
@@ -157,25 +152,26 @@ function yellowcube_demo_config_ds_layout_settings_info() {
         8 => 'product:yellowcube_demo_ean',
         9 => 'comments',
       ),
+      'left' => array(
+        1 => 'field_image',
+      ),
     ),
     'fields' => array(
       'title' => 'right',
       'field_image' => 'left',
       'product:commerce_price' => 'right',
       'field_product' => 'right',
-      'product:yellowcube_demo_description' => 'bottom',
-      'product:field_weight' => 'bottom',
-      'product:field_dimensions' => 'bottom',
-      'product:commerce_stock' => 'bottom',
-      'product:yellowcube_demo_ean' => 'bottom',
-      'comments' => 'bottom',
+      'product:yellowcube_demo_description' => 'right',
+      'product:field_weight' => 'right',
+      'product:field_dimensions' => 'right',
+      'product:commerce_stock' => 'right',
+      'product:yellowcube_demo_ean' => 'right',
+      'comments' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'top' => 'div',
       'left' => 'div',
       'right' => 'div',
-      'bottom' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => 'class="detail-view"',

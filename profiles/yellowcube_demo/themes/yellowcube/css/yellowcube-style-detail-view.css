@@ -1,6 +1,10 @@
+.page-node.node-type-yellowcube-demo-product .detail-view {
+  border: 1px solid #E0E3E6;
+}
 .page-node.node-type-yellowcube-demo-product .detail-view .col-sm-6 {
   display: inline-block;
   padding: 10px;
+  vertical-align: top;
 }
 .page-node.node-type-yellowcube-demo-product .detail-view .col-sm-6 .field-name-title h2 {
   font-size: 28px;
@@ -35,6 +39,10 @@
   background-color: #fdd23b;
   color: #000;
   border: 1px solid #d7d7d7;
+}
+.page-node.node-type-yellowcube-demo-product .detail-view .col-sm-6 .field-yellowcube-demo-description {
+  border-top: 1px solid #E0E3E6;
+  padding-top: 10px;
 }
 .page-node.node-type-yellowcube-demo-product .detail-view .col-sm-12 {
   padding: 10px;
