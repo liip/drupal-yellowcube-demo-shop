@@ -14,3 +14,7 @@ h1.site-name a{
   float: right;
   margin-top: 20px;
 }
+
+body {
+  background: lightgreen;
+}
